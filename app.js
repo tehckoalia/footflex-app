@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFeaturedExercises();
     renderExercises();
     initializeFilters();
-    registerServiceWorker();
+    // Service worker temporarily disabled - causing 404 errors
+    // registerServiceWorker();
 });
 
 // Register Service Worker for PWA
