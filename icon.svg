@@ -1,6 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect fill="#6366f1" width="100" height="100" rx="20"/>
-  <path d="M50 20c-15 0-25 10-25 25s10 25 25 25 25-10 25-25-10-25-25-25zm0 40c-8 0-15-7-15-15s7-15 15-15 15 7 15 15-7 15-15 15z" fill="white"/>
-  <circle cx="50" cy="45" r="5" fill="white"/>
-  <path d="M50 60c-8 0-15 5-15 10v5h30v-5c0-5-7-10-15-10z" fill="white"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect fill="url(#grad)" width="100" height="100" rx="24"/>
+  <g transform="translate(20, 15) scale(0.6)">
+    <path d="M30 10 C20 10, 10 20, 10 35 C10 55, 20 65, 35 65 C50 65, 60 55, 60 35 C60 20, 50 10, 30 10 Z M30 25 C25 25, 22 28, 22 33 C22 38, 25 41, 30 41 C35 41, 38 38, 38 33 C38 28, 35 25, 30 25 Z" fill="white" opacity="0.9"/>
+    <ellipse cx="30" cy="28" rx="3" ry="2" fill="#6366f1"/>
+    <path d="M20 45 Q30 55, 40 45" stroke="white" stroke-width="3" fill="none" opacity="0.8"/>
+    <path d="M15 35 Q30 30, 45 35" stroke="white" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M15 40 Q30 45, 45 40" stroke="white" stroke-width="2" fill="none" opacity="0.6"/>
+  </g>
 </svg>
