@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootFlex - Foot Exercise App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i data-lucide="footprints" class="brand-icon"></i>
+                    <span class="brand-text">FootFlex</span>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-link active" data-page="home">Home</button>
+                    <button class="nav-link" data-page="exercises">Exercises</button>
+                    <button class="nav-link" data-page="workout">Workout</button>
+                    <button class="nav-link" data-page="progress">Progress</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Home Page -->
+        <div id="page-home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Strengthen Your Feet, <span class="gradient-text">Step by Step</span></h1>
+                    <p class="hero-subtitle">Gentle, effective exercises designed for foot health and recovery</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" onclick="navigateTo('exercises')">
+                            Start Exercises
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </button>
+                        <button class="btn btn-secondary btn-large" onclick="navigateTo('workout')">
+                            Quick Workout
+                            <i data-lucide="play" class="btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-illustration">
+                        <i data-lucide="heart-handshake" class="illustration-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="categories">
+                <div class="section-header">
+                    <h2>Exercise Categories</h2>
+                    <p>Choose exercises based on your needs</p>
+                </div>
+                <div class="category-grid" id="category-grid">
+                    <!-- Categories will be loaded dynamically -->
+                </div>
+            </section>
+
+            <section class="featured">
+                <div class="section-header">
+                    <h2>Featured Exercises</h2>
+                    <p>Popular exercises for foot health</p>
+                </div>
+                <div class="featured-grid" id="featured-grid">
+                    <!-- Featured exercises will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Exercises Page -->
+        <div id="page-exercises" class="page">
+            <section class="exercises-header">
+                <h1>Exercise Library</h1>
+                <p>Browse our collection of foot exercises</p>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="stretching">Stretching</button>
+                    <button class="filter-btn" data-filter="strengthening">Strengthening</button>
+                    <button class="filter-btn" data-filter="mobility">Mobility</button>
+                    <button class="filter-btn" data-filter="relaxation">Relaxation</button>
+                </div>
+            </section>
+            <div class="exercises-grid" id="exercises-grid">
+                <!-- Exercises will be loaded dynamically -->
+            </div>
+        </div>
+
+        <!-- Exercise Detail Page -->
+        <div id="page-exercise-detail" class="page">
+            <button class="back-btn" onclick="navigateTo('exercises')">
+                <i data-lucide="arrow-left"></i>
+                Back to Exercises
+            </button>
+            <div class="exercise-detail" id="exercise-detail">
+                <!-- Exercise details will be loaded dynamically -->
+            </div>
+        </div>
+
+        <!-- Workout Page -->
+        <div id="page-workout" class="page">
+            <section class="workout-header">
+                <h1>Quick Workout</h1>
+                <p>Follow along with a guided foot exercise routine</p>
+            </section>
+            <div class="workout-container" id="workout-container">
+                <div class="workout-setup">
+                    <h2>Choose Your Workout</h2>
+                    <div class="workout-options">
+                        <button class="workout-option" onclick="startWorkout('quick')">
+                            <i data-lucide="zap"></i>
+                            <h3>Quick Relief</h3>
+                            <p>5 minutes • 3 exercises</p>
+                        </button>
+                        <button class="workout-option" onclick="startWorkout('morning')">
+                            <i data-lucide="sun"></i>
+                            <h3>Morning Stretch</h3>
+                            <p>10 minutes • 5 exercises</p>
+                        </button>
+                        <button class="workout-option" onclick="startWorkout('evening')">
+                            <i data-lucide="moon"></i>
+                            <h3>Evening Relax</h3>
+                            <p>15 minutes • 6 exercises</p>
+                        </button>
+                        <button class="workout-option" onclick="startWorkout('custom')">
+                            <i data-lucide="sliders"></i>
+                            <h3>Custom Workout</h3>
+                            <p>Create your own routine</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Workout Page -->
+        <div id="page-active-workout" class="page">
+            <div class="active-workout">
+                <div class="workout-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="workout-progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="workout-progress-text">1 / 5</span>
+                </div>
+                <div class="current-exercise" id="current-exercise">
+                    <!-- Current exercise will be loaded dynamically -->
+                </div>
+                <div class="workout-controls">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousExercise()">
+                        <i data-lucide="skip-back"></i>
+                        Previous
+                    </button>
+                    <button class="btn btn-primary btn-large" id="play-pause-btn" onclick="togglePlayPause()">
+                        <i data-lucide="pause"></i>
+                        <span id="play-pause-text">Pause</span>
+                    </button>
+                    <button class="btn btn-secondary" id="next-btn" onclick="nextExercise()">
+                        Next
+                        <i data-lucide="skip-forward"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Page -->
+        <div id="page-progress" class="page">
+            <section class="progress-header">
+                <h1>Your Progress</h1>
+                <p>Track your foot exercise journey</p>
+            </section>
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <i data-lucide="calendar" class="stat-icon"></i>
+                    <div class="stat-content">
+                        <h3 id="total-workouts">0</h3>
+                        <p>Total Workouts</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="clock" class="stat-icon"></i>
+                    <div class="stat-content">
+                        <h3 id="total-minutes">0</h3>
+                        <p>Minutes Exercised</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="flame" class="stat-icon"></i>
+                    <div class="stat-content">
+                        <h3 id="current-streak">0</h3>
+                        <p>Day Streak</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="trophy" class="stat-icon"></i>
+                    <div class="stat-content">
+                        <h3 id="exercises-completed">0</h3>
+                        <p>Exercises Done</p>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-history">
+                <h2>Recent Activity</h2>
+                <div class="history-list" id="history-list">
+                    <p class="empty-state">No workouts yet. Start your first workout today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="exercises.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
