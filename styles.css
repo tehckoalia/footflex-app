@@ -67,6 +67,13 @@ body {
     background-clip: text;
 }
 
+.brand-credit {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
 .nav-menu {
     display: flex;
     gap: 0.5rem;
