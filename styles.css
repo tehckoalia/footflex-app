@@ -532,7 +532,25 @@ body {
     left: 0;
     color: var(--primary);
     font-weight: bold;
-    font-size: 1.2rem;
+}
+
+.exercise-media {
+    margin: 1rem 0;
+}
+
+.exercise-media img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-media iframe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .start-exercise-btn {

@@ -8,6 +8,8 @@ const exercises = [
         duration: 30,
         difficulty: "Beginner",
         description: "Essential exercise for hallux valgus - strengthens muscles between toes and helps realign the big toe.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Toe+Spreads",
+        video: null,
         instructions: [
             "Sit or stand comfortably",
             "Lift your toes and spread them as far apart as possible",
@@ -27,6 +29,8 @@ const exercises = [
         duration: 45,
         difficulty: "Beginner",
         description: "Critical for hallux valgus - improves big toe flexibility and reduces stiffness at the bunion joint.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Big+Toe+Stretch",
+        video: null,
         instructions: [
             "Sit with one leg crossed over the other",
             "Hold your big toe with your hand",
@@ -46,6 +50,8 @@ const exercises = [
         duration: 45,
         difficulty: "Intermediate",
         description: "Strengthen foot arch muscles to provide better support and reduce pressure on the bunion.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Arch+Lifts",
+        video: null,
         instructions: [
             "Stand barefoot with feet hip-width apart",
             "Press your toes into the ground while lifting your arch",
@@ -65,6 +71,8 @@ const exercises = [
         duration: 60,
         difficulty: "Beginner",
         description: "Strengthen toe muscles and improve grip - excellent for hallux valgus patients.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Towel+Scrunches",
+        video: null,
         instructions: [
             "Place a small towel on the floor",
             "Sit in a chair with feet flat on the towel",
@@ -84,6 +92,8 @@ const exercises = [
         duration: 90,
         difficulty: "Intermediate",
         description: "Advanced toe strengthening exercise - improves dexterity and helps separate toes.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Marble+Pickups",
+        video: null,
         instructions: [
             "Place 10-20 marbles on the floor",
             "Sit in a chair with feet flat",
@@ -104,6 +114,8 @@ const exercises = [
         duration: 60,
         difficulty: "Beginner",
         description: "Strengthen calf muscles and improve overall foot stability for hallux valgus patients.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Heel+Raises",
+        video: null,
         instructions: [
             "Stand with feet hip-width apart",
             "Slowly rise onto your toes",
@@ -124,6 +136,8 @@ const exercises = [
         duration: 45,
         difficulty: "Beginner",
         description: "Stretch the plantar fascia to relieve tension that can worsen hallux valgus.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Plantar+Fascia+Stretch",
+        video: null,
         instructions: [
             "Sit with one leg crossed over the other",
             "Grab your toes and pull them back toward your shin",
@@ -143,6 +157,8 @@ const exercises = [
         duration: 60,
         difficulty: "Beginner",
         description: "Roll your foot over a ball to massage the bunion area and relieve pain.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Foot+Roll",
+        video: null,
         instructions: [
             "Sit in a chair with a tennis ball on the floor",
             "Place your foot on the ball",
@@ -162,6 +178,8 @@ const exercises = [
         duration: 30,
         difficulty: "Beginner",
         description: "Use toe separators or your fingers to gently space toes and improve alignment.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Toe+Separators",
+        video: null,
         instructions: [
             "Sit comfortably",
             "Place toe separators between your toes",
@@ -182,6 +200,8 @@ const exercises = [
         duration: 60,
         difficulty: "Beginner",
         description: "Stretch your Achilles tendon to improve foot mechanics for hallux valgus.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Achilles+Stretch",
+        video: null,
         instructions: [
             "Stand facing a wall with one foot forward",
             "Place your hands on the wall at shoulder height",
@@ -201,6 +221,8 @@ const exercises = [
         duration: 45,
         difficulty: "Intermediate",
         description: "Activate intrinsic foot muscles to provide better support for hallux valgus.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Short+Foot+Exercise",
+        video: null,
         instructions: [
             "Sit or stand barefoot",
             "Lift your arch without curling your toes",
@@ -220,6 +242,8 @@ const exercises = [
         duration: 120,
         difficulty: "Beginner",
         description: "Gentle massage around the bunion to relieve pain and improve circulation.",
+        image: "https://placehold.co/600x400/6366f1/white?text=Bunion+Massage",
+        video: null,
         instructions: [
             "Sit comfortably and hold one foot",
             "Use your thumbs to gently massage the bunion area",

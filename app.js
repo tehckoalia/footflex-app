@@ -204,6 +204,28 @@ function showExerciseDetail(exerciseId) {
     const detail = document.getElementById('exercise-detail');
     const category = categories.find(cat => cat.id === currentExercise.category);
 
+    let mediaSection = '';
+    if (currentExercise.image) {
+        mediaSection = `
+            <div class="exercise-detail-section">
+                <h2>Exercise Image</h2>
+                <div class="exercise-media">
+                    <img src="${currentExercise.image}" alt="${currentExercise.name}" />
+                </div>
+            </div>
+        `;
+    }
+    if (currentExercise.video) {
+        mediaSection += `
+            <div class="exercise-detail-section">
+                <h2>Exercise Video</h2>
+                <div class="exercise-media">
+                    <iframe src="${currentExercise.video}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        `;
+    }
+
     detail.innerHTML = `
         <div class="exercise-detail-header">
             <div class="exercise-detail-image">
@@ -219,6 +241,7 @@ function showExerciseDetail(exerciseId) {
                 </div>
             </div>
         </div>
+        ${mediaSection}
         <div class="exercise-detail-section">
             <h2>Instructions</h2>
             <ul>
