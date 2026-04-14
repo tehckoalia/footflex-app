@@ -1,11 +1,12 @@
-const CACHE_NAME = 'footflex-v1';
+const CACHE_NAME = 'footflex-v2';
 const ASSETS = [
     '/',
     '/index.html',
     '/styles.css',
     '/app.js',
     '/exercises.js',
-    '/manifest.json'
+    '/manifest.json',
+    '/icon.png'
 ];
 
 // Install event - cache assets
